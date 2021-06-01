@@ -7,14 +7,14 @@ import Star from "./Star";
 const createArray = length => [...Array(length)];
 
 // [1] `StarRating` component
-export default function StarRating({ style = {}, totalStars = 5 }) {
+export default function StarRating({ style = {}, totalStars = 5, ...props }) {
 	// [3] `selectedStars` initially is set to `0`;
 	// function `setSelectedStar` is used to change the state value
 	const [selectedStars, setSelectedStars] = useState(0);
 
 	return (
 		// [5] Pass the style to `div`
-		<div style={{ padding: "5px", ...style }}>
+		<div style={{ padding: "5px", ...style }} {...props}>
 		    {createArray(totalStars).map((n, i) => (
 		    	<Star 
 		    	    key={i} 
