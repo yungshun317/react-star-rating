@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { FaStar } from "react-icons/fa";
 
+import Star from "./Star";
+
 // [2] Create a new array from the given length
 const createArray = length => [...Array(length)];
 
